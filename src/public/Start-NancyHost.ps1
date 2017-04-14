@@ -53,9 +53,9 @@ function Start-NancyHost {
     }
 
     end {
-        [NancyPS.StaticConfiguration]::EnableRequestTracing = $EnableRequestTracing
-        [NancyPS.StaticConfiguration]::DisableErrorTraces = !$EnableErrorTraces
-        [NancyPS.StaticConfiguration]::CaseSensitive = $CaseSensitive
+        [Nancy.StaticConfiguration]::EnableRequestTracing = $EnableRequestTracing
+        [Nancy.StaticConfiguration]::DisableErrorTraces = !$EnableErrorTraces
+        [Nancy.StaticConfiguration]::CaseSensitive = $CaseSensitive
 
         if(![string]::IsNullOrEmpty($DiagnosticsPassword)){
             [NancyPS.StaticBootstrapper]::DiagnosticsPassword = $DiagnosticsPassword
