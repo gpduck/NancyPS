@@ -17,7 +17,7 @@ function Start-NancyHost {
         # For advanced configuration, you can set UrlReservations manually here
         [Parameter(ParameterSetName="ManualUrlReservations")]
         [Nancy.Hosting.Self.UrlReservations]$UrlReservations = @{
-            CreateAutomatically = [bool]$Public
+            CreateAutomatically = [bool]$AutomaticUrlReservations
         }, 
 
         # For advanced configuration, you can set anything you need to on the HostConfiguration
